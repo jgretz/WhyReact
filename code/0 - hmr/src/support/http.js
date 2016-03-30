@@ -5,7 +5,7 @@ import { ROOT_URL } from '../support';
 // export
 export default class Http {
   constructor() {
-    this.ROOT_URL = `${ROOT_URL}/api`;
+    this.ROOT_URL = `${ROOT_URL}`;
   }
 
   get(relativeUrl) {

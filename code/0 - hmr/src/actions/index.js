@@ -1,1 +1,1 @@
-
+export * from './getCompanies';
