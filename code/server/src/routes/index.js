@@ -8,21 +8,20 @@ const defaultList = [
   {name:'e-Staff'}
 ];
 
+const getCompanies = () => {
+  const companies = cache.get(key);
+  return companies ? companies : defaultList;
+};
+
 module.exports = {
   get: (req, res) => {
-    let companies = cache.get(key);
-    if (!companies) {
-      companies = defaultList;
-      cache.put(key, defaultList);
-    }
-
-    res.json(companies);
+    res.json(getCompanies());
   },
 
   post: (req, res) => {
-    const companies = cache.get(key);
-    companies.push(req.body);
+    const companies = getCompanies();
 
+    companies.push(req.body);
     cache.put(key, companies);
 
     res.json(companies);
