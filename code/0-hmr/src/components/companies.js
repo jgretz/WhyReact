@@ -38,22 +38,22 @@ class Companies extends SelfBindingComponent {
           </Row>
           <Row>
             <Col xs={12}>
-              <h1>Cool Companies</h1>
+              <h1>Cool Companies in PGH</h1>
             </Col>
           </Row>
           <Row>
             <Col xs={12}>
-              <div>
+              <ListGroup>
                 {
                   this.props.companies.map((company) => {
                     return (
-                      <div key={company.name}>
+                      <ListGroupItem key={company.name}>
                         {company.name}
-                      </div>
+                      </ListGroupItem>
                     );
                   })
                 }
-              </div>
+              </ListGroup>
             </Col>
           </Row>
         </Grid>

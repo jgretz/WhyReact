@@ -14,7 +14,7 @@ class Companies extends SelfBindingComponent {
     if (form.name.length == 0) {
       return;
     }
-    
+
     this.props.addCompany(form);
     this.props.resetForm();
   }
