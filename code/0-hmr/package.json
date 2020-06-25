@@ -18,7 +18,7 @@
   "author": "Josh Gretz",
   "license": "MIT",
   "dependencies": {
-    "axios": "0.9.1",
+    "axios": "0.19.2",
     "object-assign": "4.0.1",
     "react": "0.14.8",
     "react-bootstrap": "0.28.4",
